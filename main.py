@@ -111,7 +111,7 @@ while cap.isOpened():
     pts = np.array(
         [four_points[0], four_points[1], four_points[3], four_points[2]], np.int32
     )
-    cv2.polylines(frame, [pts], True, (0, 255, 255), thickness=4)
+    cv2.polylines(frame, [pts], True, (0, 255, 255), thickness=2)
 
     # Detect person and bounding boxes using DNN
     pedestrian_boxes, num_pedestrians = DNN.detect_pedestrians(frame)

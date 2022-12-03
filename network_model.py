@@ -18,7 +18,7 @@ class model:
         detection_graph, self.category_index = backbone.set_model(
             "ssd_mobilenet_v1_coco_2018_01_28", "mscoco_label_map.pbtxt"
         )
-        self.sess = tf.InteractiveSession(graph=detection_graph)
+        self.sess = tf.compat.v1.InteractiveSession(graph=detection_graph)
         self.image_tensor = detection_graph.get_tensor_by_name("image_tensor:0")
         self.detection_boxes = detection_graph.get_tensor_by_name("detection_boxes:0")
         self.detection_scores = detection_graph.get_tensor_by_name("detection_scores:0")
