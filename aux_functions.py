@@ -136,11 +136,11 @@ def put_text(frame, text, text_offset_y=25):
     return frame, 2 * text_height + text_offset_y
 
 
-def calculate_stay_at_home_index(total_pedestrians_detected, frame_num, fps):
-    normally_people = 10
-    pedestrian_per_sec = np.round(total_pedestrians_detected / frame_num, 1)
-    sh_index = 1 - pedestrian_per_sec / normally_people
-    return pedestrian_per_sec, sh_index
+# def calculate_stay_at_home_index(total_pedestrians_detected, frame_num, fps):
+#     normally_people = 10
+#     pedestrian_per_sec = np.round(total_pedestrians_detected / frame_num, 1)
+#     sh_index = 1 - pedestrian_per_sec / normally_people
+#     return pedestrian_per_sec, sh_index
 
 
 def plot_pedestrian_boxes_on_image(frame, pedestrian_boxes):

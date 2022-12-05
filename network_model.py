@@ -12,9 +12,9 @@ class model:
     def __init__(self):
         # detection_graph, self.category_index = backbone.set_model('ssd_mobilenet_v1_fpn_shared_box_predictor_640x640_coco14_sync_2018_07_03',
         #                                                           'mscoco_label_map.pbtxt')
-        # # detection_graph, self.category_index = backbone.set_model(
-        # #     'faster_rcnn_resnet50_coco_2018_01_28',
-        # #     'mscoco_label_map.pbtxt')
+        # detection_graph, self.category_index = backbone.set_model(
+        #     'faster_rcnn_resnet50_coco_2018_01_28',
+        #     'mscoco_label_map.pbtxt')
         detection_graph, self.category_index = backbone.set_model(
             "ssd_mobilenet_v1_coco_2018_01_28", "mscoco_label_map.pbtxt"
         )
